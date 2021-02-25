@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>dynamic clock</title>
+</head>
+
+
+<body>
+    <button id="btn">click me</button>
+    <p id="clockWise"></p>
+    <script>
+        // the toLocaleTimeString() method returns the time portion of a date object as a
+        // string,using locale convention
+
+        var clock = setInterval(clocktiming, 1000)
+
+        function clocktiming(){
+        var d = new Date();
+        var amjad = d.toLocaleTimeString(); //sirf time ka portion hi  fetch krta hai
+        // document.write(amjad); //esko nh likhna continously chalta rahe ga clock
+        document.getElementById('clockWise').innerHTML = amjad;
+
+    }
+    </script>
+</body>
+
+</html>
